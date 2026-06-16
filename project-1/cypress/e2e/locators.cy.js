@@ -39,4 +39,11 @@ describe("Locaters ", () => {
     cy.contains("[type='submit']", "Not Unique Text");
     cy.get("[type='submit']").contains("Not Unique Text");
   });
+
+  // get elements by using find method
+  // Get the descendent DOM elements of a specific selector.
+  it("locate the elements by using find method", () => {
+    cy.get("#form-1").find(".btn-1");
+    cy.get("#form-1").find(".btn-2");
+  });
 });
